@@ -1,0 +1,23 @@
+
+"primary"      => "#2cb9ec",
+"primarylight" => "#26a0d8",
+"primarydark"  => "#2166B1",
+"grey"         => "#515151",
+"white"        => "#ffffff",
+"black"        => "#000000",
+---------------------------------------------------------------
+
+Buttons List Select 
+
+btn-1 white : White Button Text Blue Light 1
+btn-1 white2 : White Button Text Blue 2
+btn-1 white3 : White Button Text Blue Dark 3
+btn-1 primary : Blue Button 1
+btn-1 primarylight : Blue Light Button 2
+btn-1 primarydark : Blue Dark Button 3
+btn-2 arrow primarydark : Button Blue arrow 1
+btn-2 arrow primarylight : Button Blue arrow 2
+btn-2 arrow white : Button with arrow 2
+
+
+---------------------------------------------------------------

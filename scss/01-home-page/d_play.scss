@@ -1,0 +1,77 @@
+.play{
+	background-image: url('../images/Dot-Grid.png');
+	background-repeat: repeat;
+	padding-top: 117px;
+	padding-bottom: 117px;
+	&-container{
+		@media (min-width: 1199.98px){
+			margin: auto;
+		}
+		@media (min-width: 1199.98px){
+			margin: auto;
+		}
+
+	}
+
+	.margin-right{
+		margin-right: 2%;
+	}
+
+	.play-col-lg-5{
+		width: 39.6%;
+	}
+	
+	.play-flex-box{
+		background-color: $primary;
+		&.secondary{
+			background-color: $secondary!important;
+		}
+		padding: 54px 48px;
+		.content-box{
+			color: $white;
+			.title-box{
+				border-bottom: 1px solid #ffff;
+				display: block;
+				padding-bottom: 15px;
+				margin-bottom: 21px;
+			}
+			p{
+				color: $white;
+			}
+			@media (max-width: 1199.98px){
+				order: 2;
+				text-align: center;
+			}
+		}
+		.button-box{
+			position: relative;
+			display: inline-block;
+			align-self: end;
+			@media (max-width: 1199.98px){
+				order: 3;
+				text-align: center;
+			}
+		}
+		.icon-box{
+			@media (max-width: 1199.98px){
+				order: 1;
+				margin: auto;
+			}
+			.icon{
+				margin-left: auto;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				@media (max-width: 1199.98px){
+					margin: 0 auto 20px;
+					display: block;
+				}
+				img{
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+				}
+			}			
+		}
+	}
+}

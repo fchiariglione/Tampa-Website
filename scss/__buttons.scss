@@ -1,0 +1,337 @@
+/*START Buttons------------------------------------------ */
+$btn_b_radius: 26.5px;
+$btn_font_size1: 15px;
+$btn_font_weight1: 700;
+$btn_letter-spacing1: 0.1px;
+$btn_line_height: 1;
+$btn_letter-spacing: 0.1px;
+$color_btn1: $white;
+$color_btn2: $primary;
+
+$selector_color: $primarylight;
+
+a, button, li{
+  &.btn-1{
+    background-color: transparent;
+    border-radius: $btn_b_radius !important;
+    border: none;
+    box-shadow: none;
+    color: $color_btn1;
+    cursor: pointer;
+    display: inline-block;
+    @include font1;
+    font-size: $btn_font_size1 !important;
+    font-stretch: normal !important;
+    font-style: normal;
+    font-weight: $btn_font_weight1 !important;
+    letter-spacing: $btn_letter-spacing1 !important;
+    line-height: $btn_line_height !important;
+    margin: 0;
+    min-width: 175px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 19px 24px;
+    position: relative;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    &.primary{
+      background-color: $primary !important;
+      &:hover, &:focus,&:active{
+        background-color: $secondary !important;
+      }
+    }
+    &.primarylight{
+      background-color: $primarylight !important;
+      &:hover, &:focus,&:active{
+        background-color: $primary !important;
+      }
+    }
+    &.primarydark{
+      background-color: $primarydark !important;
+      &:hover, &:focus,&:active{
+        background-color: $primarylight !important;
+      }
+    }
+    &.secondary{
+      background-color: $secondary !important;
+      &:hover, &:focus,&:active{
+        background-color: $tertiary !important;
+      }
+    }
+    &.white{
+      background-color: $white !important;
+      color: $primary !important;
+      &:hover, &:focus,&:active{
+        background-color: $secondarylight !important;
+        color: $primary !important;
+      }
+    }
+    &.white2{
+      background-color: $white !important;
+      color: $primarylight !important;
+      &:hover, &:focus,&:active{
+        background-color: #BEEBFF !important;
+        color: $white !important;
+      }
+    }
+    &.white3{
+      background-color: $white !important;
+      color: $primarydark !important;
+      &:hover, &:focus,&:active{
+        background-color: $primary !important;
+        color: $white !important;
+      }
+    }
+    // &.secondary{
+    //   background-color: $secondary !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $secondarylight !important;
+    //   }
+    // }
+    // &.secondarylight{
+    //   background-color: $secondarylight !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $secondary !important;
+    //   }
+    // }
+    // &.tertiary{
+    //   background-color: $tertiary !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $tertiarylight !important;
+    //   }
+    // }
+    // &.tertiarylight{
+    //   background-color: $tertiarylight !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $tertiary !important;
+    //   }
+    // }
+    // &.quaternary{
+    //   background-color: $quaternary !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $quaternarylight !important;
+    //   }
+    // }
+    // &.quaternarylight{
+    //   background-color: $quaternarylight !important;
+    //   &:hover, &:focus,&:active{
+    //     background-color: $quaternary !important;
+    //   }
+    // }
+    &.arrow{
+      display: block;
+      padding-right: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 28px;
+      &::after{
+        content: "";
+        @include center(0, -50%);
+        background-image: url('../images/icons/arrow-icon-black.svg') !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: unset;
+        left: unset;
+        position: absolute;
+        right: 25px;
+        top: 50%;
+        transition: background-image 0.2s ease, background-position 0.4s ease-in-out;
+        width: 35px; height: 10px;
+      }
+      &:hover,&:focus,&:active{
+        color: $white !important;
+        &::after{
+          animation: bounceXR 2s infinite;
+        }  
+      }
+    }
+    &::selection {
+      background-color: $selector_color;
+      color: white;
+    }
+  }
+
+  &.btn-2{
+    background-color: transparent !important;
+    //border-bottom: 2px solid transparent;
+    border: none;
+    color: $color_btn2;
+    @include font1;
+    font-size: 12.5px;
+    font-stretch: normal;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -0.16px;
+    line-height: 1.2;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.4s ease;
+    &::selection {
+      background-color: $selector_color;
+      color: white;
+    }
+    &.primarydark{
+      color: $primarydark !important;
+      &.arrow{
+        &::after{
+          background-image: url('../images/icons/arrow-icon-primarydark.svg') !important;
+        }
+        &:hover,&:focus,&:active{
+          color: $primarylight !important;
+          &::after{
+            background-image: url('../images/icons/arrow-icon-primarylight.svg') !important;
+          }  
+        }
+      }
+    }
+    &.primarylight{
+      color: $primarylight !important;
+      &.arrow{
+        &::after{
+          background-image: url('../images/icons/arrow-icon-primarylight.svg') !important;
+        }
+        &:hover,&:focus,&:active{
+          color: $primary !important;
+          &::after{
+            background-image: url('../images/icons/arrow-icon-primary.svg') !important;
+          }  
+        }
+      }
+    }
+    // &.secondary{
+    //   color: $secondarylight !important;
+    //   &.arrow{
+    //     &::after{
+    //       background-image: url('../images/icons/arrow-icon-secondarylight.svg') !important;
+    //     }
+    //     &:hover,&:focus,&:active{
+    //       color: $secondary !important;
+    //       border-color: $secondarylight !important;
+    //       &::after{
+    //         background-image: url('../images/icons/arrow-icon-secondary.svg') !important;
+    //       }
+    //     }
+    //   }
+    // }
+    // &.tertiary{
+    //   color: $tertiary !important;
+    //   &.arrow{
+    //     &::after{
+    //       background-image: url('../images/icons/arrow-icon-tertiary.svg') !important;
+    //     }
+    //     &:hover,&:focus,&:active{
+    //       color: $tertiarylight !important;
+    //       border-color: $tertiarylight !important;
+    //       &::after{
+    //         background-image: url('../images/icons/arrow-icon-tertiarylight.svg') !important;
+    //       }
+    //     }
+    //   }
+    // }
+    // &.quaternary{
+    //   color: $quaternary !important;
+    //   &.arrow{
+    //     &::after{
+    //       background-image: url('../images/icons/arrow-icon-quaternary.svg') !important;
+    //     }
+    //     &:hover,&:focus,&:active{
+    //       color: $quaternarylight !important;
+    //       border-color: $quaternarylight !important;
+    //       &::after{
+    //         background-image: url('../images/icons/arrow-icon-quaternarylight.svg') !important;
+    //       }
+    //     }
+    //   }
+    // }
+    &.white{
+      color: $white !important;
+      &.arrow{
+        &::after{
+          background-image: url('../images/icons/arrow-icon-white.svg') !important;
+          transition: background-image 0.4s ease;
+        }
+        &:hover,&:focus,&:active{
+          color: $white !important;
+          text-decoration: underline;
+          &::after{
+            background-image: url('../images/icons/arrow-icon-white.svg') !important;
+          }  
+        }
+      }
+    }
+    &.black{
+      color: $black !important;
+      &.arrow{
+        &::after{
+          background-image: url('../images/icons/arrow-icon-black.svg') !important;
+          transition: background-image 0.4s ease;
+        }
+        &:hover,&:focus,&:active{
+          color: $black !important;
+          text-decoration: underline;
+          &::after{
+            background-image: url('../images/icons/arrow-icon-black.svg') !important;
+          }  
+        }
+      }
+    }
+    &.arrow{
+      margin-right: 38px !important;
+      &::after{
+        content: "";
+        @include center(0, -50%);
+        position: absolute;
+        bottom: unset;
+        left: unset;
+        right: -39px;
+        top: 50%;
+        background-image: url('../images/icons/arrow-icon-primary.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: background-image 0.2s ease, background-position 0.4s ease-in-out;
+        width: 35px; height: 10px;
+      }
+    }
+    &.arrow-back{
+      margin-left: 40px !important;
+      margin-right: 0 !important;
+      &::after{
+        content: "";
+        @include center(0, -50%);
+        position: absolute;
+        bottom: unset;
+        left: -39px;
+        top: 50%;
+        background-image: url('../images/icons/arrow-icon-quaternary.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: background-image 0.2s ease, background-position 0.4s ease-in-out;
+        width: 35px; height: 10px;
+      }
+    }
+    &:hover,&:focus,&:active{
+      background-color: transparent !important;
+      text-decoration: none !important;
+      color: $primary !important;
+      &.arrow{
+        &::after{
+          background-image: url('../images/icons/arrow-icon-primary.svg') !important;
+          animation: bounceXR 2s infinite;
+        }
+      }
+      &.arrow-back{
+        &::after{
+          animation: bounceXR 2s infinite;
+        }
+      }
+    }
+  }
+}
+/*END Buttons-------------------------------------*/

@@ -1,0 +1,40 @@
+.welcome{
+	padding-top: 100px;
+	padding-bottom: 180px;
+
+	&-title{
+		border-bottom: 1px solid #8DB9DC;
+		margin-bottom: 27px;
+		@media (max-width: 1199px){
+			text-align: center;
+		}
+
+	}
+
+	&-text{
+		margin-bottom: 53px;
+		@media (max-width: 1199px){
+			text-align: center;
+		}
+	}
+	&-image{
+		position: absolute;
+		left: 59%;
+		height: 100%;
+		width: 55%;
+		bottom: 5%;
+	}
+
+	@media (max-width: 1199px){
+		.welcome-title h2, .welcome-text p{
+			text-align: center;
+		}
+
+		.welcome-button{
+			margin: auto !important;
+		}
+
+
+	}
+}
+

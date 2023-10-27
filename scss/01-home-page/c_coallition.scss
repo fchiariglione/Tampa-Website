@@ -1,0 +1,70 @@
+.section-coallition{
+  position: relative;
+  padding-top: 0;
+  @media (max-width: 1199.98px){
+    padding-top: 350px;
+  }
+  .coallition-background{
+    background-color: $tertiaryLight;
+    z-index: -2;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .container-fluid{
+    padding: 0;
+    @media (min-width: 576px){
+      padding: 0 30px;
+    }
+  }
+  .coallition-image{
+      position: absolute;
+      background-image: url('../images/mental-awereness.png');
+      width: 55%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: calc(100% + 77px); 
+      top: unset; 
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      @media (max-width: 1199.98px){
+        height: 650px;
+        top: 0;
+        width: 100vw;
+      }
+    }
+
+  .coallition-block{
+    background-color: $primary;
+    color: $white;
+    padding: 95px 43px 50px 61px;
+    p {
+      color: $white;
+    }
+
+
+    .coallition-title{
+      border-bottom: 1px solid #FFFFFF;
+      padding-bottom: 16px;
+      margin-bottom: 33px;
+      text-align: left;
+    }
+
+    @media (max-width: 575.9px){
+      padding: 30px 20px;
+      .coallition-title{
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+      .coallition-button{
+        margin: auto !important;
+      }
+
+    }
+  }
+}

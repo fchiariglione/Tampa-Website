@@ -1,0 +1,47 @@
+.newsletter{
+	width: 100%;
+	background-image: url('../images/Dot-Grid-Dark.png');
+	background-color: #2082CD;
+	position: relative;
+
+	&-separator{
+		position: absolute;
+		width: 90%;
+		height: 47px;
+		background-color: $primary;
+		top: 0;
+		right: 0;
+		@media (max-width: 768px){
+			width: 75%;
+		}
+	}
+
+	&-container{
+		padding: 10% 10%;
+		text-align: center;		
+	}
+	&-title{
+		color: #ffff;
+	}
+
+	.signup-form{
+		width: 100%;
+		input{
+			background-color: #50B1FC;
+			color: $white;
+			height: 66px;
+			border: 0;
+			margin-right: 2%;
+			padding: 0 20% 0 2%;
+			font-family: 'sofia-pro', sans-serif;
+			font-weight: 900;
+			font-size: 13px;
+
+			
+		}
+		:first-child{
+				padding: 0 15% 0 2%;
+			}
+	}
+	
+}

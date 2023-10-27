@@ -1,0 +1,160 @@
+.image-carousel-block{
+  background-color: transparent;
+  position: relative;
+  &.padding-vertical{
+    padding: 95px 0 120px;
+    @media (max-width: 575.98px){
+      padding: 40px 0;
+    }
+  }
+  .top-section{
+    margin-bottom: 30px;
+    h2,h3,h4,h5,h6{
+      margin-bottom: 0 !important;
+    }
+  }
+  .swiper-container-gallery{
+    overflow: hidden;
+    padding-bottom: 60px;
+    padding: 0;
+    position: relative;
+    width: calc(100% + ((100vw - 1320px)/(2)));
+    @media (max-width: 1399.98px){
+      width: calc(100% + ((100vw - 1140px)/(2)));
+    }
+    @media (max-width: 991.98px){
+      width: calc(100% + ((100vw - 960px)/(2)));
+    }
+    @media (max-width: 767.98px){
+      width: 100%;
+    }
+    .swiper-wrapper{
+      margin-bottom: 70px;
+      @media (max-width: 575.98px){
+        margin-bottom: 30px;
+      }
+      .swiper-slide{
+        overflow: hidden;
+        text-align: center;
+        width: auto;
+        //center
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        figure{
+          display: block;
+          img{
+            width: 100%;
+            height: 350px !important;
+            object-fit: cover;
+            @media (max-width: 575.98px){
+              object-fit: contain;
+              height: 270px !important;
+            }
+          }
+          .text-wrap{
+            display: none;
+            @include font1;
+            color: #4d4d4f;
+            font-size: 14px;
+            font-stretch: normal;
+            font-style: normal;
+            font-weight: normal;
+            letter-spacing: 0.98px;
+            line-height: 1.43;
+            padding: 15px 0;
+            text-align: left;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .container-controls{
+      position: relative;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .arrows{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 50px;
+        width: 100px;
+        .swiper-button-next{
+          &::before{
+            background-image: url('../images/icons/carousel-arrow-slider-right.svg');
+          }
+        }
+        .swiper-button-prev{
+          &::before{
+            background-image: url('../images/icons/carousel-arrow-slider-left.svg');
+          }
+        }
+        .swiper-button-next, .swiper-button-prev{
+          height: 45px;
+          left: unset;
+          margin: 0;
+          position: relative;
+          right: unset;
+          top: unset;
+          width: 45px;
+          border-radius: 50%;
+          &::after{
+            content: none;
+          }
+          &::before{
+            content: "";
+            display: flex;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: contain;
+            height: 45px;
+            position: relative;
+            width: 45px;
+            z-index: 5;
+          }
+        }
+      }
+      // .swiper-scrollbar{
+      //   left: 0;
+      //   //width: calc(100% - 160px);
+      //   width: 100%;
+      //   background-color: transparent;
+      //   padding: 0 1px;
+      //   &::after{
+      //     content: "";
+      //     @include center(-50%, -50%);
+      //     background-color: $primarydark;
+      //     bottom: unset;
+      //     height: 1px;
+      //     left: 50%;
+      //     opacity: 0.5;
+      //     position: absolute;
+      //     top: 50%;
+      //     width: 100%;
+      //     z-index: 0;
+      //   }
+      //   .swiper-scrollbar-drag{
+      //     background-color: $primarydark;
+      //     height: 4px;
+      //     border-radius: 5px;
+      //     z-index: 5;
+      //   }
+      // }
+    }
+  }
+}
